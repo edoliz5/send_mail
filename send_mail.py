@@ -12,6 +12,7 @@ app.config['MAIL_USERNAME'] = 'sinteg@efesur.cl'
 app.config['MAIL_PASSWORD'] = ''
 app.config['MAIL_DEFAULT_SENDER'] = ('SINTEG', 'sinteg@efesur.cl') 
 app.config['MAIL_SUPPRESS_SEND'] = False
+app.config['TESTING'] = False
 
 mail = Mail(app)
 
