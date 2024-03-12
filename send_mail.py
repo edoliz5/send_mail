@@ -39,10 +39,11 @@ def enviar_correo():
         # Enviar correo electrónico
         message = Message(subject=asunto, bcc=destinatarios)
         message.html = render_template('mail.html', username='Eduardo')
-        print("\ncrea y setena variblae mensaje")
+        id_message = message.msgId
+        print(f"\nCrea y setea variable message", id_message, len(message.msgId))
        
         mail.send(message)
-        print("envia maile")
+        print(f"\nEnvia mail")
         return jsonify({'mensaje': 'Correo enviado'})
         #return render_template('mail.html', username='Eduardo')
     except Exception as e:
